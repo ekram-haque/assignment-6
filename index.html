@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
       * {
@@ -29,18 +31,38 @@
   </head>
   <body>
 
-    <header class="bg-[#15803D] py-[24px]">
-      <div class="flex justify-between items-center px-[135px]">
-        <h2 class="text-white font-semibold text-[30px]">Green Earth</h2>
-        <ul class="flex gap-3 text-white">
-          <li>About</li>
-          <li>Gallery</li>
-          <li>Plant a Tree</li>
-        </ul>
-        <button class="btn btn-warning rounded-3xl text-green-700">
-          Plant a tree
-        </button>
+    <header class="">
+      
+
+    <div class="navbar bg-[#15803D] shadow-sm py-[24px] px-[135px]">
+    <div class="navbar-start ">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
       </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a>About</a></li>
+        <li><a>Gallery</a></li>
+        <li><a>Plant a Tree</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-white font-semibold text-[30px]">Green Earth</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 text-white">
+      <li><a>About</a></li>
+      <li><a>Gallery</a></li>
+      <li><a>Plant a Tree</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn btn-warning rounded-3xl text-green-700">Plant a tree</a>
+  </div>
+      </div>
+
+
     </header>
 
     <main class="bg-[#F0FDF4]">
@@ -78,18 +100,54 @@
 
         </aside>
 
-        <section class=" col-span-8">
-          <div id="plants-by -category" class="grid grid-cols-3 gap-[20px] mx-auto"> 
+        <section class=" col-span-8 ">
+          
+          <div id="plants-by-category" class="grid grid-cols-3 gap-[20px] mx-auto"> 
+
+            <div class="flex justify-center items-center w-[100%] mx-auto">
+                  <progress class="progress w-[56%]  "></progress>
+            </div>
+
 
           </div>
+
+
+                    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+   
+    <div id="modal-container"></div>
+    
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
         </section>
 
-        <aside class="bg-white rounded-lg py-3 px-2 col-span-2">
+        <aside  class="bg-white rounded-lg py-3 px-2 col-span-2">
+          <h3 class="font-bold text-lg px-2">Your Cart</h3>
           
-        </aside>
+          <div id="carts-container">
+              <h4>No cart found</h4>
+          </div>
 
+          
+          <hr>
+          <div class="flex justify-between items-center ">
+            <h4>Total:</h4>
+            <h3 id="total-price">৳ </h3>
+          </div>
+
+        </aside>
         </section>
 
+    
       </section>
 
 
