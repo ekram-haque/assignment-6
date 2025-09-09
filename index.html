@@ -35,7 +35,7 @@
     <header class="">
       
 
-    <div class="navbar bg-[#15803D] shadow-sm py-[24px] md:px-[135px] px-[20px]">
+    <div class="navbar bg-[#15803D] shadow-sm py-[24px] md:px-[135px] px-[10px]">
     <div class="navbar-start ">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -69,13 +69,13 @@
     <main class="bg-[#F0FDF4]">
 
       <section 
-      class="banner bg-[#CFF0DC] flex justify-center items-center py-[50px]">
+      class="banner bg-[#CFF0DC] flex justify-center items-center py-[30px] md:py-0">
 
-        <img src="./assets/hero-leaf1.png" alt="" class="hidden md:visible" />
+        <img src="./assets/hero-leaf1.png" alt="" class="hidden md:block" />
 
         <div class="justify-center items-center flex flex-col gap-3">
           <h3 class="font-bold text-[24px] md:text-[48px]">Plant a Tree, Grow a Future</h3>
-          <p class="px-3 ">
+          <p class="px-3 justify-center items-center flex ">
             Join our mission to plant 1 million trees and make the Earth greener
             for future generations.
           </p>
@@ -84,7 +84,7 @@
           </button>
         </div>
 
-        <img src="./assets/hero-leaf2.png" alt="" class="hidden md:visible" />
+        <img src="./assets/hero-leaf2.png" alt="" class="hidden md:block" />
 
       </section>`
 
@@ -97,15 +97,15 @@
         <section class="  grid grid-cols-12 md:w-11/12 w-full mx-auto gap-[30px] " > 
 
           <aside class=" md:col-span-2 col-span-12">
-          <h3 class="flex justify-center mb-[15px] font-bold text-xl">Categories</h3>
+          <h3 class="sm:flex sm:justify-center mb-[15px] font-bold text-xl">Categories</h3>
           
           <ul id="category-container" class="flex gap-2
-           flex-wrap sm:justify-center sm:px-[10px]  "> </ul>
+           flex-wrap  justify-center md:flex-col px-[10px]  "> </ul>
 
         </aside>
 
         <section class=" md:col-span-8 col-span-12 ">
-          <h3 class="font-bold text-xl md:hidden flex justify-center mb-[15px]">plant feed</h3>
+          <h3 class="font-bold text-xl md:hidden flex justify-center mb-[15px] md:hidden">plant feed</h3>
           <div id="plants-by-category" class="grid grid-cols-1 md:grid-cols-3 gap-[20px] mx-auto"> 
 
             <div class="flex justify-center items-center ">

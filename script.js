@@ -17,11 +17,15 @@ fetch('https://openapi.programming-hero.com/api/categories')
     categories.forEach(category => {
         categoryContainer.innerHTML +=`
          <li 
-         id="${category.id}" class="hover:bg-[#1eaa51] hover:text-white cursor-pointer p-[10px] rounded-md text-black my-2 pl-2">
+         id="${category.id}" class="group hover:bg-[#1eaa51] hover:text-white  cursor-pointer p-[10px] rounded-md text-black my-1.5 pl-2">
          ${category.category_name} 
+         
+         <p class="mt-1 text-sm text-white hidden group-hover:block group-focus-within:block line-clamp-2">
+         ${category.small_description} </p>
          </li>
         
         `
+        console.log(category.small_description)
     });
 })
 .catch(err => {
@@ -40,6 +44,7 @@ categoryContainer.addEventListener('click' ,(e) =>{
     if(e.target.localName === 'li'){
         e.target.classList.add('bg-[#0a5827]')
         e.target.classList.add('text-white')
+
         
         plantsByCategory(e.target.id)
     }
@@ -247,7 +252,7 @@ showmodal = (data) => {
                 </div>
                 
               </div>
-              <button class="btn bg-[#15803d] rounded-3xl text-white w-[100%] px-2  mx-auto">Add to Cart </button>
+              
 
             </div>
         
